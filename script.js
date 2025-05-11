@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Elementos
     const button = document.getElementById('showMessageButton');
-    const specialMessageDiv = document.getElementById('specialMessage');
-
+    const messageDiv = document.getElementById('specialMessage');
+    
+    // Mensagens
     const messages = [
         "Com você, a vida não tem 'bugs'!",
         "Obrigado por 'debugar' nossos problemas com tanto amor!",
@@ -9,29 +11,35 @@ document.addEventListener('DOMContentLoaded', function() {
         "Você transforma qualquer 'erro 404' em 'página encontrada' com sucesso!",
         "Mãe: nossa 'desenvolvedora full-stack' de felicidade!"
     ];
-
-    let messageIndex = 0;
-
+    
+    let currentIndex = 0;
+    
+    // Botão de mensagens
     if (button) {
-        button.addEventListener('click', () => {
-            specialMessageDiv.style.opacity = 0;
+        button.addEventListener('click', function() {
+            messageDiv.style.opacity = 0;
+            
             setTimeout(() => {
-                specialMessageDiv.textContent = messages[messageIndex];
-                specialMessageDiv.style.opacity = 1;
-                messageIndex = (messageIndex + 1) % messages.length;
+                messageDiv.textContent = messages[currentIndex];
+                messageDiv.style.opacity = 1;
+                currentIndex = (currentIndex + 1) % messages.length;
             }, 400);
         });
     }
-
+    
+    // Corações flutuantes
     function createHeart() {
         const heart = document.createElement('div');
         heart.classList.add('heart');
+        heart.innerHTML = '❤️';
         heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.animationDuration = Math.random() * 2 + 3 + 's';
-        heart.innerHTML = '&#10084;';
+        heart.style.animationDuration = Math.random() * 3 + 2 + 's';
         document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 5000);
+        
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
     }
-
+    
     setInterval(createHeart, 300);
 });
