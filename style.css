@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #e6f7ff, #b3e0f7);
+    color: #021D36;
+    text-align: center;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.97);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #d81b60;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.foto-nossa {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    border: 5px solid #d81b60;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.foto-nossa:hover {
+    transform: scale(1.05);
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.code-metaphor {
+    font-family: 'Courier New', Courier, monospace;
+    color: #009DE0;
+    background-color: #f0f4f8;
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(216, 27, 96, 0.2);
+}
+
+button:hover {
+    background-color: #b9154e;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(216, 27, 96, 0.3);
+}
+
+#specialMessage {
+    margin-top: 30px;
+    font-size: 1.3em;
+    color: #009DE0;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    min-height: 35px;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.heart {
+    position: fixed;
+    color: #d81b60;
+    font-size: 1.5rem;
+    top: -1.5rem;
+    animation: fall 5s linear infinite;
+    opacity: 0.8;
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .foto-nossa {
+        width: 200px;
+        height: 200px;
+    }
+}
