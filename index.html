@@ -4,52 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Dia das Mães</title>
-    <style>
-        /* ESTILOS ESSENCIAIS (já incluídos aqui pra garantir) */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #e6f7ff, #b3e0f7);
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
-        }
-        /* ESTILO DA FOTO (100% funcional) */
-        .foto-nossa {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #d81b60;
-            margin: 20px auto;
-            display: block;
-        }
-    </style>
-    <!-- Fonte do Google -->
-    <link href="https://drive.google.com/file/d/1osaRGvsuhbfm131Gt4OL62z3OfxSnJ69/view?usp=sharing">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Feliz Dia das Mães!</h1>
         
-        <!-- FOTO PRONTA (com seu link) -->
-        <img class="foto-nossa" 
-             src="https://lh3.googleusercontent.com/pw/AP1GczNnIBi8a0So887CGd0Eai4T-DKol3UfIIm-Mc6rvSyteRrbssh6LqcO9w=w253-h188-no" 
-             alt="Nossa foto">
+        <!-- FOTO INTEGRADA (com seu link do ImgBB) -->
+        <img src="https://i.ibb.co/6727KmMk/foto-mae.jpg" 
+             alt="Nossa foto" 
+             class="foto-nossa">
         
-        <p>Mãe, você é o <span style="font-family: 'Courier New'; color: #009DE0; background: #f0f4f8; padding: 2px 5px; border-radius: 3px;">código-fonte</span> do meu amor!</p>
+        <p>
+            Mãe, você é o <code class="code-metaphor">código-fonte</code> do amor, da paciência e da sabedoria.
+            Seu <code class="code-metaphor">algoritmo</code> de carinho é perfeito e <code class="code-metaphor">executa</code> sempre com sucesso em nossos corações.
+        </p>
         
-        <button onclick="alert('Te amo, mãe! ❤️')">Clique aqui</button>
+        <button id="showMessageButton">Clique para uma mensagem especial!</button>
+        <div id="specialMessage"></div>
+        
+        <p class="footer">
+            Feito com ❤️ para a melhor mãe do mundo
+        </p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
